@@ -5,6 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var dbConfig = require('./db');
+var mongoose = require('mongoose');
+// Connect to DB
+mongoose.connect(dbConfig.url,function(res,err){
+  if(err){
+    console.log('ERROR conectando a : ' + dbConfig.url + '. ' + err);
+  }
+});
+
 var app = express();
 
 // view engine setup
