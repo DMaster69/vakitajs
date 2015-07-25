@@ -1,7 +1,12 @@
 extends layout
-
+block css
+	link(rel='stylesheet', href='/stylesheets/mystyle.css')
 block content
-	.container
-		.jumbotron
-			h1= title
-			p Welcome to #{title}
+	div.container
+		div.row
+			div.col-xs-12
+				h1 Bienvenido al home
+					a(href='/auth/login', class='text-center new-account') Entrar
+					#message
+					if message
+						h1.text-center.error-message #{message}
