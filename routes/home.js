@@ -14,7 +14,7 @@ var isAuthenticated = function (req, res, next) {
 /* GET home page. */
 router.get('/',isAuthenticated, function(req, res) {
     // Display the Login page with any flash message, if any
-    res.render('home', { title:'Inicio', message: req.flash('message'),user: req.user });
+    res.render('dashboard', { title:'Inicio', message: req.flash('message'),user: req.user });
 });
 	
 module.exports = router;

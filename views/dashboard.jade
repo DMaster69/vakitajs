@@ -1,5 +1,8 @@
 extends layout
-
+block css
+	link(rel='stylesheet', href='/stylesheets/dashboard.css')
+block header
+	include ./include/header_dashboard.jade
 block content
 	div.container
 		div.row
