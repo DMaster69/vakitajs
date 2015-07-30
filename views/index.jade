@@ -1,12 +1,83 @@
 extends layout
 block css
-	link(rel='stylesheet', href='/stylesheets/mystyle.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+block js
+	script(src='/javascripts/index.js')
+block header
+	include ./include/header.jade
 block content
-	div.container
-		div.row
-			div.col-xs-12
-				h1 Bienvenido al home
-					a(href='/auth/login', class='text-center new-account') Entrar
-					#message
-					if message
-						h1.text-center.error-message #{message}
+	header#page-top
+		.container
+			.row
+				.col-lg-12
+					img.img-responsive(src='http://ironsummitmedia.github.io/startbootstrap-freelancer/img/profile.png', alt='')
+					.intro-text
+						span.name Inspired by PureCSS.io
+						hr.star-light
+						p.skills Landing Page Layout
+						p.skills Scroll to see the effect
+	.content-wrapper
+		section#portfolio.primary
+			.container
+				.row
+					.col-lg-12.text-center
+						h2 PORTAFOLIO
+						hr.star-primary
+				.row
+					.col-sm-4
+						img(src='http://lorempixel.com/360/260/nature/')
+					.col-sm-4
+						img(src='http://lorempixel.com/360/260/animals/')
+					.col-sm-4
+						img(src='http://lorempixel.com/360/260/abstract/')
+		section#about.success
+			.container
+				.row
+					.col-lg-12.text-center
+						h2 About
+						hr.star-light
+				.row
+					.col-lg-4.col-lg-offset-2
+						p
+							| Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.
+					.col-lg-4
+						p
+							| Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
+		section#contact.primary
+			.container
+				.row
+					.col-lg-12.text-center
+						h2 Contact
+						hr.star-primary
+				.row
+					.col-lg-8.col-lg-offset-2
+						// To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+						// The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+						form#contactForm(name='sentMessage', novalidate='')
+							.row.control-group
+								.form-group.col-xs-12.floating-label-form-group.controls
+									label Name
+									input#name.form-control(type='text', placeholder='Name', required='', data-validation-required-message='Please enter your name.')
+									p.help-block.text-danger
+							.row.control-group
+								.form-group.col-xs-12.floating-label-form-group.controls
+									label Email Address
+									input#email.form-control(type='email', placeholder='Email Address', required='', data-validation-required-message='Please enter your email address.')
+									p.help-block.text-danger
+							.row.control-group
+								.form-group.col-xs-12.floating-label-form-group.controls
+									label Phone Number
+									input#phone.form-control(type='tel', placeholder='Phone Number', required='', data-validation-required-message='Please enter your phone number.')
+									p.help-block.text-danger
+							.row.control-group
+								.form-group.col-xs-12.floating-label-form-group.controls
+									label Message
+									textarea#message.form-control(rows='5', placeholder='Message', required='', data-validation-required-message='Please enter a message.')
+									p.help-block.text-danger
+							br
+							#success
+								.row
+									.form-group.col-xs-12
+										button.btn.btn-success.btn-lg(type='submit') Send
+		footer.container(style='min-height:200px; background-color:#18bc9c;color:#fff;text-align:center;padding-top:50px;')
+			| INSPIRED BY PURECSS.IO © 2015
