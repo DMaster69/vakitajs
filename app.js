@@ -13,7 +13,7 @@ mongoose.connect(dbConfig.url,function(res,err){
     console.log('ERROR conectando a : ' + dbConfig.url + '. ' + err);
   }
 });
-
+//cambioo para git
 var app = express();
 
 // view engine setup
