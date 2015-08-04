@@ -12,17 +12,11 @@ nav.navbar.navbar-inverse
       #navbar-collapse-4.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
           li
-            a(href='#') Home
+            a(href='#') Dashboard
           li
-            a(href='#') About
+            a(href='#') Crear Evento
           li
-            a(href='#') Services
-          li
-            a(href='#') Works
-          li
-            a(href='#') News
-          li
-            a(href='#') Contact
+            a(href='#') Crear Evento
           li
             a.btn.btn-default.btn-outline.btn-circle.collapsed(data-toggle='collapse', href='#nav-collapse4', aria-expanded='false', aria-controls='nav-collapse4')
               | Profile 
@@ -31,17 +25,17 @@ nav.navbar.navbar-inverse
           li
             a(href='#') Support
           li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', aria-expanded='false')
+            a.dropdown-toggle(href='#', data-toggle='dropdown-menu', aria-expanded='false')
               img.img-circle(src='https://pbs.twimg.com/profile_images/588909533428322304/Gxuyp46N.jpg', alt='#{user.firstName}', width='20')
               |  #{user.firstName} 
               span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') My profile
-              li
-                a(href='#') Favorited
-              li
-                a(href='#') Settings
-              li.divider
-              li
-                a(href='#') Logout
+          ul.dropdown-menu
+            li
+              a(href='#') My profile
+            li
+              a(href='#') Favorited
+            li
+              a(href='#') Settings
+            li.divider
+            li
+              a(href='auth/signout') Logout
