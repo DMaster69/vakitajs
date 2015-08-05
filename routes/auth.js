@@ -72,10 +72,6 @@ module.exports = function(passport){
 			failureRedirect : '/'
 		})
 	);
-
-	/* GET Twitter View Page */
-	router.get('/twitter', isAuthenticated, function(req, res){
-		res.render('twitter', { user: req.user });
-	})
+	
 	return router;
 }

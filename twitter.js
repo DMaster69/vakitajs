@@ -1,6 +1,6 @@
 // twitter app settings
 module.exports = {
-	'apikey' : '<your_api_key>',
-	'apisecret' : '<your_api_secret>',
-	'callbackUrl' : 'http://127.0.0.1:3000/login/twitter/callback'
+	'apikey' : 'YFaTjIyeqXVNFo1aMRBRoTGyL',
+	'apisecret' : 'pYa79Jet6Q6fGJfhoAa2wZKuiB8PC4XHLljLFUvwFl617aPuis',
+	'callbackUrl' : 'http://vakitajs-dmaster69.c9.io/auth/twitter/callback'
 }
