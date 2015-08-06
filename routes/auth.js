@@ -8,7 +8,7 @@ var isAuthenticated = function (req, res, next) {
 	if (req.isAuthenticated())
 		return next();
 	// if the user is not authenticated then redirect him to the login page
-	res.redirect('/authlogin');
+	res.redirect('/auth/login');
 }
 module.exports = function(passport){
     /* GET  */
@@ -49,7 +49,7 @@ module.exports = function(passport){
 	// route for facebook authentication and login
 	// different scopes while logging in
 	router.get('/facebook', 
-		passport.authenticate('facebook', {  scope : ['email','public_profile','user_friends'] }
+		passport.authenticate('facebook', { scope : ['email','public_profile','user_friends'] }
 	));
 
 	// handle the callback after facebook has authenticated the user

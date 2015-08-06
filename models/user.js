@@ -12,9 +12,7 @@ module.exports = mongoose.model('user',
 	fb: {
 		id: String,
 		access_token: String,
-		firstName: String,
-		lastName: String,
-		email: String
+		profileUrl: String
 	},
 	twitter: {
 		id: String,
