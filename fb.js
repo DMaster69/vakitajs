@@ -1,6 +1,6 @@
 // facebook app settings
 module.exports = {
-	'appID' : '<your_app_id>',
-	'appSecret' : '<your_app_secret>',
+	'appID' : '524258974389573',
+	'appSecret' : '4af0794158429d5fb64920fb8e3b817e',
 	'callbackUrl' : 'http://vakitajs-dmaster69.c9.io/auth/facebook/callback'
 }

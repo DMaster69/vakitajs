@@ -49,7 +49,7 @@ module.exports = function(passport){
 	// route for facebook authentication and login
 	// different scopes while logging in
 	router.get('/facebook', 
-		passport.authenticate('facebook', { scope : 'email' }
+		passport.authenticate('facebook', {  scope : ['email','public_profile','user_friends'] }
 	));
 
 	// handle the callback after facebook has authenticated the user
