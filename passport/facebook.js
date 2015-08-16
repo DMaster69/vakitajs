@@ -8,15 +8,11 @@ module.exports = function(passport) {
         clientID        : fbConfig.appID,
         clientSecret    : fbConfig.appSecret,
         callbackURL     : fbConfig.callbackUrl,
-        profileFields: ['id', 'birthday', 'email', 'gender', 'displayName','name','profileUrl']
+        profileFields	: fbConfig.profileFields 
     },
 
     // facebook will send back the tokens and profile
     function(access_token, refresh_token, profile, done) {
-		
-		console.log('==================================');
-    	console.log('profile', profile);
-    	console.log('==================================');
 		
 		// asynchronous
 		process.nextTick(function() {
