@@ -7,6 +7,6 @@ git commit -m "$1"
 if [$2 -eq "true"] then
     echo "executing git push"
     git push
-else
+else then
     echo "skipping git push"
 fi
