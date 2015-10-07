@@ -5,7 +5,7 @@ git add .
 echo "excecuting git commit with $1"
 git commit -m "$1"
 
-if ["$2" -eq "true"] 
+if ["$2" = "true"] 
 then
     echo "executing git push"
     git push
