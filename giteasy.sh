@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "executing git add . command"
 git add .
 echo "excecuting git commit with $1"
